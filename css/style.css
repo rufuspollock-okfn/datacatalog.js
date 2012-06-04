@@ -1483,3 +1483,13 @@ body.editresources .error-explanation {
   float: none;
   text-align: center;
 }
+
+
+/* ==================== */
+/* Home Page Group Listing  */
+/* ==================== */
+
+#search-page .groups .group {
+  height: 140px;
+}
+
