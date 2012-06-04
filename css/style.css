@@ -4,22 +4,27 @@ body.no-sidebar .content-outer {
   width: 940px;
 }
 
-.navbar-header {
-  background-color: #e2e2e2;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#e2e2e2), to(#cccccc));
-  background-image: -webkit-linear-gradient(top, #e2e2e2, #cccccc);
-  background-image:    -moz-linear-gradient(top, #e2e2e2, #cccccc);
-  background-image:     -ms-linear-gradient(top, #e2e2e2, #cccccc);
-  background-image:      -o-linear-gradient(top, #e2e2e2, #cccccc);
-  background-image:         linear-gradient(top, #e2e2e2, #cccccc);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#e2e2e2', EndColorStr='#cccccc');
-
-  margin-bottom: 18px;
-     -moz-box-shadow: 0px 2px 15px #dddddd;
-  -webkit-box-shadow: 0px 2px 15px #dddddd;
-          box-shadow: 0px 2px 15px #dddddd;
-  border-bottom: 1px solid #ccc;
+.navbar .container {
+  width: 940px;
 }
+
+.navbar-inner {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background-color: #fff;
+  /*
+  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  */
+  filter: none;
+  background: url(../img/noise.png), -webkit-linear-gradient(top, #fff, #eee);
+  background-image: url(../img/noise.png), -moz-linear-gradient(top, #fff, #eee);
+  background-image: url(../img/noise.png), -ms-linear-gradient(top, #fff, #eee);
+  background-image: url(../img/noise.png), -o-linear-gradient(top, #fff, #eee);
+  background-image:  url(../img/noise.png), linear-gradient(to bottom, #fff, #eee);*/
+}
+
 
 header {
   padding: 5px 0px 5px 0px;
@@ -736,7 +741,7 @@ body.package.search #menusearch {
   display: none;
 }
 .dataset-search {
-  margin-bottom: 35px;
+  margin-bottom: 80px;
   padding-right: 100px;
 }
 input.search {
@@ -783,6 +788,7 @@ ul.datasets li .header {
 }
 ul.datasets li .extract {
 	padding-top: 0.3em;
+	padding-bottom: 0.3em;
 }
 ul.datasets li a {
 	text-decoration: none;
@@ -823,6 +829,24 @@ ul.datasets .openness li {
     border:none;
 }
 
+.dataset.summary ul {
+  margin: 0;
+}
+
+.dataset.summary .tags li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 2px 4px 2px 4px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    border:none;
+    font-weight:normal;
+    font-size: 0.8em;
+    background: #e2e2e2;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
 
 /* =================== */
 /* = Markdown Editor = */
