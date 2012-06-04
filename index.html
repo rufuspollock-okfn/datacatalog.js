@@ -32,51 +32,50 @@
 
   <script src="js/app.js"></script>
 
-  <style>
-     body {
-        padding-top: 80px; /* to make the container go all the way to the bottom of the topbar */
-      }
-  </style>
 </head>
 
 <body>
 
-  <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner header">
+  <div class="navbar">
+    <div class="navbar-inner navbar-header">
       <div class="container">
         <a class="brand" href="#"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_simple_60x60.png" alt="DataCatalog Logo" title="DataCatalog Logo" id="logo"> DataCatalog.js - Build a DataCatalog in 5m</a>
       </div>
     </div>
   </div>
 
-  <div class="container">
-    <div id="search-page" class="page-view">
-      <div class="row">
-        <div class="span9">
-          <form id="search-form" class='dataset-search'>
-            <input type="search" name="q" placeholder="Search ..." class="search" />
-            <input type="submit" name="submit" value="Search" class="btn btn-large button"/>
-          </form>
-        </div>
+  <div id="search-page" class="container page-view">
+    <div class="row">
+      <div class="span9">
+        <form id="search-form" class='dataset-search'>
+          <input type="search" name="q" placeholder="Search ..." class="search" />
+          <input type="submit" name="submit" value="Search" class="btn btn-large button"/>
+        </form>
       </div>
-
-      <div class="row">
-        <div class="dialog span9"></div>
-      </div>
-
-      <div class="row">
-        <div class="results span9" style="display: none;">
-          <h4>
-          <strong><span class="count"></span></strong> results found.
-          </h4>
-
-          <ul class="datasets">
-          </ul>
-        </div>
-      </div>
-
     </div>
 
+    <div class="row">
+      <div class="dialog span9"></div>
+    </div>
+
+    <div class="row">
+      <div class="results span9" style="display: none;">
+        <h4>
+        <strong><span class="count"></span></strong> results found.
+        </h4>
+
+        <ul class="datasets">
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="view-page" class="container page-view" style="display: none;">
+    <h2>View Dataset</h2>
+  </div>
+
+  <div class="container">
     <footer>
       <div class="row">
         <div class="xoxo span2">
