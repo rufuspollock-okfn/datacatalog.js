@@ -15,11 +15,15 @@ directly from its API.
         git submodule update
 
 2. Open index.html in your web browser
-3. Change config options such as:
+3. Tweak the config. First copy the template config:
 
-  * the location of the backing CKAN instance (default is datahub.io)
-  * Filters (e.g. only show datasets from group or groups X)
-  * Set your logo ...
+       cp configlocal.js.template configlocal.js
+
+   Now edit and change config options such as:
+
+    * the location of the backing CKAN instance (default is datahub.io)
+    * Filters (e.g. only show datasets from group or groups X)
+    * Set your logo ...
 
 4. Theme your site and tweak the templates
 5. Deploy using github pages or your own static site
