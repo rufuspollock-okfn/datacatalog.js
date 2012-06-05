@@ -16,6 +16,7 @@
   <script src="vendor/ckanjs/vendor/jquery/1.6.2/jquery.js"></script>
   <script src="vendor/ckanjs/vendor/json2.js"></script>
   <script src="vendor/ckanjs/vendor/mustache/0.5.0-dev/mustache.js"></script>
+  <script src="vendor/ckanjs/vendor/handlebars/1.0.0.beta.6/handlebars.js"></script>
   <script src="vendor/ckanjs/vendor/jqueryui/1.8.4/jquery-ui.min.js"></script>
   <script src="vendor/ckanjs/vendor/underscore/1.1.6/underscore.js"></script>
   <script src="vendor/ckanjs/vendor/backbone/0.5.1/backbone.js"></script>
@@ -44,10 +45,25 @@
     </div>
   </div>
 
-  <div id="search-page" class="container page-view">
+  <div id="home-page" class="container page-view">
     <div class="row">
       <div class="span8">
-        <form id="search-form" class='dataset-search'>
+        <form class='search-form dataset-search'>
+          <input type="search" name="q" placeholder="Search ..." class="search" />
+          <input type="submit" name="submit" value="Search" class="btn btn-large button"/>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="groups span12"></div>
+    </div>
+  </div>
+
+  <div id="search-page" class="container page-view" style="display:none;">
+    <div class="row">
+      <div class="span8">
+        <form class='search-form dataset-search'>
           <input type="search" name="q" placeholder="Search ..." class="search" />
           <input type="submit" name="submit" value="Search" class="btn btn-large button"/>
         </form>
@@ -66,12 +82,6 @@
 
         <ul class="datasets">
         </ul>
-      </div>
-
-    </div>
-
-    <div class="row">
-      <div class="groups span12">
       </div>
     </div>
 

@@ -25,8 +25,7 @@ jQuery(document).ready(function($) {
     function render() {
       var data = {groups: _.map(groups, function(x) { return x.toTemplateJSON()})};
       var html = Mustache.render(template, data);
-      $('#search-page .groups').html(html);
-      $('#search-page').show();
+      $('#home-page .groups').html(html);
     }
     _.each(groups, function(group) {
       group.bind('change', render);
