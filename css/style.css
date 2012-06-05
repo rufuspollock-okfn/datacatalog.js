@@ -269,6 +269,10 @@ ul.no-break li {
   overflow: hidden;
 }
 
+div.subsection {
+  margin-bottom: 18px;
+}
+
 /* =============== */
 /* MinorNavigation */
 /* =============== */
@@ -829,11 +833,11 @@ ul.datasets .openness li {
     border:none;
 }
 
-.dataset.summary ul {
+ul.tags {
   margin: 0;
 }
 
-.dataset.summary .tags li {
+ul.tags li {
     list-style-type: none;
     display: inline-block;
     padding: 2px 4px 2px 4px;
