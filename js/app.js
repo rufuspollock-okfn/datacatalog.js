@@ -2,35 +2,22 @@ jQuery(document).ready(function($) {
   if(window.localConfig === undefined) {
     window.localConfig = undefined;
   }
-  CKAN.UI.initialize({
+  var workspace = new CKAN.UI.Workspace({
     config: localConfig
   });
+  Backbone.history.start()
 
-  var workspace = CKAN.UI.workspace;
-  workspace.client.getTopGroups('openspending', showGroups);
+  workspace.client.getTopGroups(workspace.config.groups, showGroups);
 
   function showGroups(groups) {
-    var template = ' \
-        <div class="row"> \
-          {{#groups}} \
-          <div class="span4"> \
-            <div class="well group"> \
-              <h3>{{title}} </h3> \
-              {{snippet}} \
-            </div> \
-          </div> \
-          {{/groups}} \
-        </div> \
-    ';
-    function render() {
-      var data = {groups: _.map(groups, function(x) { return x.toTemplateJSON()})};
-      var html = Mustache.render(template, data);
-      $('#home-page .groups').html(html);
+    // ignore the first group as it is what we filtered on!
+    if (workspace.config.groups) {
+      groups = groups.slice(1);
     }
-    _.each(groups, function(group) {
-      group.bind('change', render);
-      group.fetch();
+    var view = new CKAN.View.GroupSummaryList({
+      collection: new CKAN.Model.GroupCollection(groups)
     });
+    $('#home-page .groups-section').append(view.el);
   }
 });
 

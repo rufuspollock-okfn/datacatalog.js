@@ -1521,3 +1521,7 @@ body.editresources .error-explanation {
   height: 140px;
 }
 
+.groups .group.summary .dataset-count {
+  font-weight: bold;
+}
+
