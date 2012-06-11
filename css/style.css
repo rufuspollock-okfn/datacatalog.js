@@ -1504,6 +1504,7 @@ body.editresources .error-explanation {
 
 #home-page .groups .group {
   height: 140px;
+  word-break: break-word;
 }
 
 .groups .group.summary .dataset-count {
